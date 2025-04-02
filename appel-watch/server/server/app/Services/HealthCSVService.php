@@ -5,6 +5,8 @@ namespace App\Services;
 use App\Models\HealthMetric;
 use Illuminate\Support\Facades\Log;
 
+ini_set('max_execution_time', 180); // 3 minutes
+
 class HealthCSVService
 {
     public function parseAndStore(string $filePath, int $userId, string $batchId): int

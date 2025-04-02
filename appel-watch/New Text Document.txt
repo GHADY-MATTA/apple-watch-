@@ -1,0 +1,11 @@
+
+   INFO  Personal access client created successfully.  
+
+  Client ID ...................................................................................................................... 1  
+  Client secret ........................................................................... N7M6aRszKJnlA9SNDTgi6SEnpQ3NUrNkZjZh1bGk  
+
+   INFO  Password grant client created successfully.
+
+  Client ID ...................................................................................................................... 2  
+  Client secret ........................................................................... Sl6E21tekYKveJxk3X7xhmTnLjgzq9UB5uywTT1f  
+PS C:\Users\Matta\Desktop\appel-watch\server\server> 

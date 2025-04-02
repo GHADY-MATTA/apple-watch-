@@ -7,15 +7,27 @@ use App\Events\HealthDataUploaded;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Auth;
 
+ini_set('max_execution_time', 180); // 3 minutes
 class HealthDataController extends Controller
 {
+    
     public function upload(Request $request)
     {
         Log::info('📩 Received upload request.');
 
         // 👤 TEMP: hardcoded user for now
-        $userId = 1;
+       Log::info('📩 Received upload request.');
+
+        // ✅ Get authenticated user ID
+        $userId = Auth::id();
+
+        if (!$userId) {
+            Log::error('🚫 Unauthorized upload attempt.');
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+        Log::info($userId);
 
         // 📁 Get file from request
         $file = $request->file('file');

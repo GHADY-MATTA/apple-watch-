@@ -5,6 +5,8 @@ namespace App\Services;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
+ini_set('max_execution_time', 180); // 3 minutes
+
 class HealthAIService
 {
     protected $apiKey;

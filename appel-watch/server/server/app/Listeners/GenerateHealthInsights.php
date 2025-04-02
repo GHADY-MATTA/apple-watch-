@@ -11,6 +11,8 @@ use App\Models\WeeklyInsight;
 use App\Models\MonthlyInsight;
 use App\Models\CycleInsight;
 
+ini_set('max_execution_time', 180); // 3 minutes
+
 class GenerateHealthInsights
 {
     /**
